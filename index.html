@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="wraper">
+        <header></header>
+        <main>
+            <div>
+                <div class="info">
+                </div>
+                <div class="signal-generator">
+                    <h1>Генератор сигналу</h1>
+                    <div class="signal-generator__settings">
+                        <div>
+                            <label for="signal-generator__frequency">Частота Гц </label>
+                            <input type="text" class="signal-generator__frequency">
+                        </div>
+                        <div>
+                            <label for="signal-generator__amplitude">Амплітуда </label>
+                            <input type="text" class="signal-generator__amplitude" checked>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <div class="signal-generator__switch">
+                        <div class="signal-generator__indicator"></div>
+                        <div class="signal-generator__toogle-group">
+                            <div>
+                                <label for="signal-generator__toogle-group">ВКЛ</label>
+                                <input type="radio" class="signal-generator__toogle" id="generatorOn">
+                            </div>
+                            <div> <label for="signal-generator__toogle-group">ВИКЛ</label>
+                                <input type="radio" class="signal-generator__toogle" id="generatorOff" checked>
+                            </div>
+
+                            <div class="signal-generator__toogle-indicator"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="oscilographh">
+                <h1>Осцилограф</h1>
+                <canvas width="300" height="240"></canvas>
+                <div class="oscilographh__switch">
+                    <div class="oscilographh__indicator"></div>
+                    <div class="oscilographh__toogle-group">
+                        <div>
+                            <h3>Розгортка</h3>
+                            <div id="sweep__group">
+                                <label for="">6 c</label>
+                                <input type="radio" name="sweep" id="sweep-6">
+                                <label for="">3 c</label>
+                                <input type="radio" name="swee" id="sweep-3" checked>
+                                <label for="">1,5 c</label>
+                                <input type="radio" name="sweep" id="sweep-1">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="oscilographh__toogle-group">ВКЛ</label>
+                                <input type="radio" name="oscilographh__toogle" id="oscilographhOn">
+                            </div>
+                            <div>
+                                <label for="oscilographh__toogle-group">ВИКЛ</label>
+                                <input type="radio" name="oscilographh__toogle" id="oscilographhOff" checked>
+                            </div>
+
+                            <div class="oscilographh__toogle-indicator"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+    <script src="/app.js"></script>
+</body>
+
+</html>
