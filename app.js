@@ -3,8 +3,8 @@ let canvas = document.querySelector("canvas");
 let ctx = canvas.getContext('2d');
 let timer;
 let parameter = {
-    freq: 1,
-    amplitude: 1,
+    freq: 0,
+    amplitude: 1,   
     generator: false,
     oscilograph: false,
     time: 3,
@@ -148,7 +148,9 @@ document.querySelector('.signal-generator__toogle-group').addEventListener('clic
         parameter.generator = false
         off.checked = true
         on.checked = false
-        generatorIndicator.style.backgroundColor = 'red'
+        generatorIndicator.style.backgroundColor = 'red';
+        parameter.freq = 0;
+        parameter.amplitude = 1;
     }
     if (Number(frequency.value) || Number(amplitude.value)) {
         parameter.freq = Number(frequency.value)
